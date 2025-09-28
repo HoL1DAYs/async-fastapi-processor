@@ -1,0 +1,7 @@
+__pycache__/
+*.pyc
+logs/
+*.log
+.vscode/
+.DS_Store
+pytest_cache/
