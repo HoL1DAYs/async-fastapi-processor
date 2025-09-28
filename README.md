@@ -9,23 +9,26 @@
 
 ---
 
-Запуск проекта
+# Запуск проекта
 
 Собрать и запустить контейнеры:
 docker-compose up --build
 ---
 
-Запуск тестов
+# Запуск тестов:
+
 docker-compose run --rm app pytest
 
 Можно запускать отдельные тесты:
+
 docker-compose run --rm app pytest tests/test_process.py -v
 docker-compose run --rm app pytest tests/test_logger.py -v
 ---
 
-Команды работы с Redis
+# Команды работы с Redis
 
 Открыть Redis CLI:
+
 docker exec -it async-fastapi-processor-redis-1 redis-cli
 
 Получить список ключей:
