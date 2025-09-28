@@ -46,4 +46,12 @@ get f41254e9-2c63-496d-8d95-c928c14c0690
 
 ---
 Все HTTP-запросы и ответы логируются в файл:
+
 logs/app.log
+
+---
+Проект использует образ из Docker Hub. Если необходимо собрать образ локально, раскомментируйте строку с build и закомментируйте строку с image:
+    
+    # build: .
+    
+    image: temirlant201/async-fastapi-processor:latest  # заменили build на image
