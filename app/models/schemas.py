@@ -1,6 +1,9 @@
 from pydantic import BaseModel
 from typing import Any
 
+class ProcessRequest(BaseModel):
+    input_data: Any
+
 class CatFact(BaseModel):
     fact: str
     length: int

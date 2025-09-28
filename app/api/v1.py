@@ -1,11 +1,9 @@
-from fastapi import APIRouter, Request
+from fastapi import APIRouter
 from app.services.processor import process_data
-from app.models.schemas import ProcessResponse
+from app.models.schemas import ProcessRequest, ProcessResponse
 
 router = APIRouter()
 
 @router.post("/", response_model=ProcessResponse)
-async def process_endpoint(request: Request):
-    data = await request.json()
-    result = await process_data(data)
-    return result
+async def process_endpoint(request: ProcessRequest):
+    return await process_data(request.input_data)

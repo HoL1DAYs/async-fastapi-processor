@@ -1,6 +1,8 @@
 services:
   app:
-    build: .
+    # Если нужно сбилдить локально
+    # build: .
+    image: temirlant201/async-fastapi-processor:latest  # заменили build на image
     ports:
       - "8000:8000"
     volumes:
